@@ -12,8 +12,8 @@ import javax.sound.sampled.Line;
 
 
 
-public class LL2 extends LL3{
-	public static final int MAX_LETTER = 12;
+public class LL2{
+	public static final int MAX_LETTER = 20;
 	public static int l = 1;
 	
 	
@@ -68,6 +68,7 @@ public class LL2 extends LL3{
             
             newNode.ln.add(l);
             
+            
         }    
 
         else 
@@ -86,12 +87,48 @@ public class LL2 extends LL3{
         
     }
 	
+	public void sort(Node1 node) {
+		node  = head;
+		
+		Node1 index = null;
+		String temp = null;
+		int tmp = 0;
+		LL3 tm = null;
+		
+		
+		if(head == null) {
+			return;
+		}
+		else {
+			while(node != null) {
+				index = node.next;
+				while(index != null) {
+					if(node.word.compareTo(index.word) > 0) {
+						temp = node.word;
+						node.word = index.word;
+						index.word = temp;
+						tmp = node.count;
+						node.count = index.count;
+						index.count = tmp;
+						tm = node.ln;
+						node.ln = index.ln;
+						index.ln = tm;
+					}
+					index = index.next;
+				}
+				node = node.next;
+			}
+		}
+	}
+	
 	public void displaylist() 
 
     {    
 
         //Pointing the head to the node called current    
-        Node1 current = head;   
+        Node1 current = head;  
+        
+        sort(current);
 
         if(head == null)
 
@@ -125,17 +162,15 @@ public class LL2 extends LL3{
 	
 	public static void main(String[] args) throws IOException {
 		
-		char[] wrd = new char[12];
+		char[] wrd = new char[MAX_LETTER];
 		int i = 0;
 		String w = null ; 
 		
 		LL stopW  = new LL();
-		stopW.readStopW("stopW.txt", stopW);
-		
-		LL3 dong = new LL3();
+		stopW.readStopW("stopCase.txt", stopW);
 		
 		LL2 VBList = new LL2();
-		File VanBan = new File("VanBan.txt");
+		File VanBan = new File("testcase.txt");
 	    // Create the File Reader object
 	    FileReader vb = new FileReader(VanBan);
 	    // Create the BufferedReader object
@@ -168,6 +203,5 @@ public class LL2 extends LL3{
 	        } 
 	    }
 	    VBList.displaylist();
-	    dong.showLine();
 	}
 }

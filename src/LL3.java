@@ -20,6 +20,7 @@ public class LL3 {
 	public void add(int l) {
 		line newLine = new line(l);
 		
+		// check if the line has already existed in the list, if so, end the method
 		line now = head;
 		while(now != null) {
 			if(now.line == l) {
@@ -32,7 +33,7 @@ public class LL3 {
 
         {    
 
-//if the given list is empty, making the two nodes head and tail to point to the newly created node newLine    
+			//if the given list is empty, making the two nodes head and tail to point to the newly created node newLine    
 
             head = newLine;    
 
@@ -44,7 +45,7 @@ public class LL3 {
 
         {    
 
-//otherwise the newLine will be added after tail so that the next pointer of tail points to    the newLine   
+        	//otherwise the newLine will be added after tail so that the next pointer of tail points to    the newLine   
 
             tail.nextLine = newLine;    
 
