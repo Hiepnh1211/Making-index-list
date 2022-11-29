@@ -9,3 +9,5 @@
 - Nếu 2 từ giống nhau xuất hiện trên cùng 1 dòng thì danh sách chỉ cập nhật 1 lần dòng đó
 - Sau khi tạo ra danh sách chỉ mục của các từ, các từ trong mỗi node của DSLK sẽ đc so sánh và sắp xếp theo thứ tự từ điển thống qua vào hàm sort
 - Đã bổ sung 2 test case, có thể đưa ra test case riêng nếu muốn
+  + testcase.txt chứa văn bản
+  + stopCase.txt chứa danh sách các từ vô nghĩa
