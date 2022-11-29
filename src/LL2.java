@@ -86,7 +86,7 @@ public class LL2{
         }   
         
     }
-	
+	// Sorting method to sort the word alphabetically
 	public void sort(Node1 node) {
 		node  = head;
 		
