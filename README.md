@@ -1,5 +1,5 @@
 # Making-index-list
-- Đưa ra danh sách chỉ mục của file VanBan.txt
+- Đưa ra danh sách chỉ mục của file VanBan.txt(Hoặc 1 file văn bản nào đó, tôi cx ko bt nx)
 - Chương trình đọc các từ trong file VanBan.txt(loại bỏ các dấu câu như: ':', '...', ';', ...) -> kiểm tra từ có nghĩa thông qua việc đối chiếu với các từ có trong file stopW.txt
 - Chương trình sử dụng 3 danh sách liên kết đơn để lưu các từ có nghĩa, các từ vô nghĩa và dòng nơi từ có nghĩa xuất hiện
   + LL: Danh sách các từ vô nghĩa đọc từ file stopW.txt
