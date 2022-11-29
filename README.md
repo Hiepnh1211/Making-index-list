@@ -7,4 +7,5 @@
   + LL3: Danh sách các dòng nơi các từ tương ứng xuất hiện
 - Mỗi khi thêm 1 từ vào danh sách, nếu từ đó đã tồn tại trong danh sách thì số lần suất hiện của từ(biến count) sẽ tăng lên, đồng thời dòng nơi từ xuất hiện sẽ được thêm vào danh sách
 - Nếu 2 từ giống nhau xuất hiện trên cùng 1 dòng thì danh sách chỉ cập nhật 1 lần dòng đó
-- Hiện đang tìm cách sắp xếp các phần tử danh sách theo thứ tự từ điển (cái này update sau:))
+- Sau khi tạo ra danh sách chỉ mục của các từ, các từ trong mỗi node của DSLK sẽ đc so sánh và sắp xếp theo thứ tự từ điển thống qua vào hàm sort
+- Đã bổ sung 2 test case, có thể đưa ra test case riêng nếu muốn
