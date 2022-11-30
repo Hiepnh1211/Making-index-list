@@ -47,14 +47,14 @@ public class BnTree {
         }
  
         /* Otherwise, recur down the tree */
-        else if (word.compareTo(root.word) < 0) {
+        else if (word.toLowerCase().compareTo(root.word.toLowerCase()) < 0) {
         	root.left = insertRec(root.left, word);
         }
-        else if (word.compareTo(root.word) > 0) {
+        else if (word.toLowerCase().compareTo(root.word.toLowerCase()) > 0) {
         	root.right = insertRec(root.right, word);
         }
             
-        else if(word.compareTo(word) == 0) {
+        else if(word.toLowerCase().compareTo(word.toLowerCase()) == 0) {
         	root.count++;
         	root.line.add(l);
         }

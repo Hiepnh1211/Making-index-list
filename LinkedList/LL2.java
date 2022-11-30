@@ -39,7 +39,7 @@ public class LL2{
         
         
         while (current != null) {
-			if(current.word.equals(word)){
+			if(current.word.toLowerCase().equals(word.toLowerCase())){
 				current.count++;
 				current.ln.add(l);
 				return;
@@ -97,7 +97,7 @@ public class LL2{
 			while(node != null) {
 				index = node.next;
 				while(index != null) {
-					if(node.word.compareTo(index.word) > 0) {
+					if(node.word.toLowerCase().compareTo(index.word.toLowerCase()) > 0) {
 						temp = node.word;
 						node.word = index.word;
 						index.word = temp;
