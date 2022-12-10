@@ -58,7 +58,4 @@ public class LL3 {
 		}
 	}
 	
-	public void check(String w) {
-		
-	}
 }

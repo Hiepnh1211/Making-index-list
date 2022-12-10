@@ -85,10 +85,10 @@ public class BnTree {
 		String w = null ;
     	
     	LL stopW  = new LL();
-		stopW.readStopW("stopW.txt", stopW);
+		stopW.readStopW("stopCase.txt", stopW);
 		
 		BnTree BNT = new BnTree();
-		File VanBan = new File("VanBan.txt");
+		File VanBan = new File("testcase.txt");
 	    // Create the File Reader object
 	    FileReader vb = new FileReader(VanBan);
 	    // Create the BufferedReader object

@@ -1,19 +1,15 @@
 package HashTable;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
 
-
+import LinkedList.LL3;
 
 public class LL2{
 	public static final int MAX_LETTER = 20;
 	
-	
+	//Node's values
 	class Node1{
-		String word;
-		int count = 1;
-		LL3 ln = new LL3();
+		String word; //The word
+		int count = 1; //Appearing times
+		LL3 ln = new LL3(); // Linked list of the line where the word appear
 		Node1 next;
 		public Node1(String word) {
 			this.word = word;
@@ -96,6 +92,8 @@ public class LL2{
 			while(node != null) {
 				index = node.next;
 				while(index != null) {
+					//if the word of the first node is smaller alphabetically than the next node, 
+					//the values (word, count, line) of 2 nodes will be switch for each other
 					if(node.word.toLowerCase().compareTo(index.word.toLowerCase()) > 0) {
 						temp = node.word;
 						node.word = index.word;
@@ -121,7 +119,8 @@ public class LL2{
         //Pointing the head to the node called current    
         Node1 current = head;  
         
-        //sort(current);
+        //Sorting the Nodes
+        sort(current);
 
         if(head == null)
 
@@ -138,9 +137,10 @@ public class LL2{
             System.out.print(current.word + " "); 
             System.out.print(" " + current.count + " ");
             current.ln.showLine();
+            System.out.print(";");
             current = current.next;    
-            System.out.println();
-        }        
+        } 
+        System.out.println();
 
     }
 }

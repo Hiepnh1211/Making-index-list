@@ -69,6 +69,7 @@ public class HashM {
 	    System.out.println("Index List: ");
 	    for(int m = 0; m < SIZE; m++) {
 	    	if(Hash[m].head != null) {
+	    		System.out.print(m + " ");
 	    		Hash[m].displaylist();
 	    	}
 	    }

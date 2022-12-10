@@ -10,11 +10,11 @@ public class LL2{
 	public static final int MAX_LETTER = 20;
 	public static int l = 1;
 	
-	
+	//Node's values
 	class Node1{
-		String word;
-		int count = 1;
-		LL3 ln = new LL3();
+		String word; //The word
+		int count = 1; //Appearing times
+		LL3 ln = new LL3(); // Linked list of the line where the word appear
 		Node1 next;
 		public Node1(String word) {
 			this.word = word;
@@ -97,6 +97,8 @@ public class LL2{
 			while(node != null) {
 				index = node.next;
 				while(index != null) {
+					//if the word of the first node is smaller alphabetically than the next node, 
+					//the values (word, count, line) of 2 nodes will be switch for each other
 					if(node.word.toLowerCase().compareTo(index.word.toLowerCase()) > 0) {
 						temp = node.word;
 						node.word = index.word;
@@ -161,10 +163,10 @@ public class LL2{
 		String w = null ; 
 		
 		LL stopW  = new LL();
-		stopW.readStopW("stopW.txt", stopW);
+		stopW.readStopW("stopCase.txt", stopW);
 		
 		LL2 VBList = new LL2();
-		File VanBan = new File("VanBan.txt");
+		File VanBan = new File("testcase.txt");
 	    // Create the File Reader object
 	    FileReader vb = new FileReader(VanBan);
 	    // Create the BufferedReader object

@@ -57,8 +57,4 @@ public class LL3 {
 			currLine = currLine.nextLine;
 		}
 	}
-	
-	public void check(String w) {
-		
-	}
 }
