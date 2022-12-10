@@ -48,13 +48,17 @@ public class BnTree {
  
         /* Otherwise, recur down the tree */
         else if (word.toLowerCase().compareTo(root.word.toLowerCase()) < 0) {
+		//if the word is smaller alphabetically than the root, it will be located on the left node of the root
         	root.left = insertRec(root.left, word);
         }
         else if (word.toLowerCase().compareTo(root.word.toLowerCase()) > 0) {
+		//if the word is bigger alphabetically than the root, it will be located on the right node of the root
         	root.right = insertRec(root.right, word);
         }
             
         else if(word.toLowerCase().compareTo(word.toLowerCase()) == 0) {
+		//if the word is the same to the root, the variable count of the root will +1, the line where the word 
+		//appear will be added to the Linked List on the line 
         	root.count++;
         	root.line.add(l);
         }
