@@ -1,4 +1,4 @@
-# Making-index-list
+# Making-index-list with Hash Table
 - Đưa ra danh sách chỉ mục của file VanBan.txt(Hoặc 1 file văn bản nào đó, tôi cx ko bt nx)
 - Chương trình đọc các từ trong file VanBan.txt(loại bỏ các dấu câu như: ':', '...', ';', ...) -> kiểm tra từ có nghĩa thông qua việc đối chiếu với các từ có trong file stopW.txt
 - Chương trình sử dụng bảng băm (nói đơn giản là 1 mảng các danh sách liên kết đơn) để lưu các từ có nghĩa, số lần xuất hiện của từ đó
